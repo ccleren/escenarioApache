@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  webserver:
+    build: conf
+    ports:
+      - '8181:80'
+    volumes:
+      - ./web:/var/www/html
+      - ./conf/sri.asir4all.ss.conf:/etc/apache2/sites-available/000-default.conf
+      - ./conf/claves.txt:/etc/apache2/claves.txt
